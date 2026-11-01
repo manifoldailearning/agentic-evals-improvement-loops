@@ -13,7 +13,7 @@ requires-python = ">=3.11"
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "ruff>=0.4"]
+dev = ["pytest>=8", "ruff==0.17.3"]
 
 [project.scripts]
 evalloop = "evalloop.cli:main"

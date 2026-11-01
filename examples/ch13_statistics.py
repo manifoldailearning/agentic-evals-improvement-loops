@@ -120,9 +120,8 @@ def main() -> None:
     for n in (30, 400):
         passed = sum(first(a, tasks, n).values())
         ci = wilson_interval(passed, n)
-        print(
-            f"v1 on {n:>3} tasks: {ci}, {100 * ci.width:.1f} pts wide"
-        )
+        wide = 100 * ci.width
+        print(f"v1 on {n:>3} tasks: {ci}, {wide:.1f} pts wide")
     show_pairing(first(a, tasks, 200), first(b, tasks, 200))
     show_planning(a, b)
     show_holm(tasks[:200])

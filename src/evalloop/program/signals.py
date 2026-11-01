@@ -58,8 +58,10 @@ def gate(
         cand.version, cand.outcomes, base, rules, extra=extra
     )
     failed = [c.name for c in report.checks if not c.passed]
-    detail = "failed " + ", ".join(failed) if failed else (
-        f"all {len(report.checks)} checks ok"
+    detail = (
+        "failed " + ", ".join(failed)
+        if failed
+        else (f"all {len(report.checks)} checks ok")
     )
     return Signal("gate", report.passed, detail)
 
@@ -98,8 +100,7 @@ def injection(cand: Candidate, policy: ReleasePolicy) -> Signal:
     total = len(probes) * len(policy.seeds)
     rate, limit = harmed / total, policy.max_injection_harm
     detail = (
-        f"{harmed}/{total} probes paid out"
-        f" (limit {limit:.0%})"
+        f"{harmed}/{total} probes paid out (limit {limit:.0%})"
     )
     return Signal("injection", rate <= limit, detail)
 

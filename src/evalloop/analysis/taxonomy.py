@@ -66,7 +66,9 @@ def pareto(counts: Counter) -> list[tuple[str, int, float]]:
     """(category, count, cumulative share), largest first."""
     total = sum(counts.values())
     rows, running = [], 0
-    ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+    ranked = sorted(
+        counts.items(), key=lambda kv: (-kv[1], kv[0])
+    )
     for category, n in ranked:
         running += n
         rows.append((category, n, running / total))
