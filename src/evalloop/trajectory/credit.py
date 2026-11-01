@@ -64,7 +64,7 @@ def answer_problems(traj: Trajectory, task: Task) -> list[str]:
     out += [f"says {p!r}" for p in phrases if p.lower() in text]
     if exp["kb"] and f"[kb:{exp['kb']}]" not in traj.answer:
         out.append("no citation")
-    out += [f"contradicts {f!r}" for f in unsupported(traj)]
+    out += [f"unsupported {f!r}" for f in unsupported(traj)]
     return out
 
 

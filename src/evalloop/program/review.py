@@ -95,7 +95,7 @@ class Evidence:
 
     def majority(self) -> dict[str, bool]:
         return {
-            t: sum(r) * 2 > len(r)
+            t: sum(r) * 2 >= len(r)  # a tie passes, as in gates
             for t, r in self.outcomes.items()
         }
 

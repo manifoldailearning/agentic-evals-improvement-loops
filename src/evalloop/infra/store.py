@@ -103,6 +103,8 @@ def compare(a: tuple, b: tuple) -> Comparison:
     old = {(r.task_id, r.seed): r.passed for r in ra}
     new = {(r.task_id, r.seed): r.passed for r in rb}
     both = sorted(old.keys() & new.keys())
+    if not both:
+        raise ValueError("the runs share no (task, seed) pairs")
     flips = [
         (k, old[k], new[k]) for k in both if old[k] != new[k]
     ]

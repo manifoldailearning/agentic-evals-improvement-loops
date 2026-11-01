@@ -110,7 +110,9 @@ def valid_tool_args(task: Task, traj: Trajectory) -> Grade:
         schema = TOOL_SCHEMAS.get(step.tool, {})
         for error in schema_errors(step.args, schema):
             problems.append(f"{step.tool}: {error}")
-    return verdict("valid_tool_args", problems, len(traj.steps))
+    return verdict(
+        "valid_tool_args", problems, len(traj.tool_calls)
+    )
 
 
 def answer_contains(task: Task, traj: Trajectory) -> Grade:
@@ -120,7 +122,7 @@ def answer_contains(task: Task, traj: Trajectory) -> Grade:
     problems = [
         f"answer lacks {p!r}"
         for p in want
-        if p.lower() not in text
+        if p is None or p.lower() not in text
     ]
     return verdict("answer_contains", problems, len(want))
 

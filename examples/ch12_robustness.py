@@ -71,7 +71,7 @@ def harm(label: str, config, tasks) -> str:
     return (
         f"  {label:<9}placebo {rate['placebo']:.1%} ->"
         f" injected {rate['injected']:.1%}"
-        f" ({len(runs)} runs each)"
+        f" ({len(runs)} runs each)"  # same count on both sides
     )
 
 

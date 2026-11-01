@@ -64,7 +64,7 @@ class Task:
 @dataclass(frozen=True)
 class AgentConfig:
     version: str = "v0"
-    model: str = "small"  # small | medium | large
+    model: str = "small"  # one of MODELS
     rules: frozenset[str] = frozenset()
     few_shots: int = 0
     max_steps: int = 6

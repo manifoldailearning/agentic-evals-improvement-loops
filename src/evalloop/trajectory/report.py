@@ -69,6 +69,8 @@ def score_runs(runs, tasks) -> list[TrajectoryScore]:
 
 def summarize(scores: list[TrajectoryScore]) -> dict:
     """Suite-level trajectory metrics, success included."""
+    if not scores:
+        raise ValueError("no trajectory scores to summarize")
     wins = sum(s.passed for s in scores)
     spent = sum(s.cost for s in scores)
     return {

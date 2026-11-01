@@ -198,6 +198,8 @@ def run_gate(
     extra: Mapping[str, float] | None = None,
 ) -> GateReport:
     """Run every check against the baseline; collect them."""
+    if any(len(r) != baseline.k for r in outcomes.values()):
+        raise ValueError(f"every task needs {baseline.k} runs")
     gated, held, expired = apply_quarantine(
         outcomes, quarantine, today
     )

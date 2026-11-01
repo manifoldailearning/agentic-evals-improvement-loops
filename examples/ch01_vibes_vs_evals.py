@@ -50,7 +50,8 @@ def print_vibes(demo) -> None:
 
 def print_eval(tasks) -> dict[str, float]:
     """Per-category table; returns overall success by name."""
-    print(f"Eval: {len(tasks)} tasks, 40 per category")
+    per = len(tasks) // len({t.category for t in tasks})
+    print(f"Eval: {len(tasks)} tasks, {per} per category")
     table = {
         n: success_by_category(c, tasks)
         for n, c in CONFIGS.items()

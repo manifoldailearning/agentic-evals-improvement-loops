@@ -71,7 +71,8 @@ def show_sequential(sessions) -> None:
     print("Sequential looks, O'Brien-Fleming-type spending:")
     print("  look  sessions      z  bound  decision")
     for i, look in enumerate(monitor(sessions, LOOKS), 1):
-        verdict = "stop: v2 wins" if look.stop else "continue"
+        winner = "v2 wins" if look.z > 0 else "v1 wins"
+        verdict = f"stop: {winner}" if look.stop else "continue"
         print(
             f"  {i:>4}  {look.sessions:>8} {look.z:>6.2f}"
             f" {look.boundary:>6.2f}  {verdict}"
