@@ -182,3 +182,18 @@ def test_example_main_prints_suite_summary(capsys):
         in out
     )
     assert max(len(line) for line in out.splitlines()) <= 64
+
+
+def test_edge_tasks_never_crash():
+    from dataclasses import replace
+
+    from evalloop.core import BASELINE, SimAgent, make_tasks
+
+    agent = SimAgent(BASELINE.evolve(temperature=1.0))
+    for t in make_tasks(60, seed=3):
+        angry = replace(t, tags=t.tags | {"angry"})
+        args = dict(t.expected["args"], order_id="A-9999")
+        stale = replace(t, expected={**t.expected, "args": args})
+        for task in (angry, stale):
+            for seed in range(3):
+                assert agent.run(task, seed).task_id == t.id

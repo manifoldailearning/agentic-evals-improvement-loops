@@ -91,15 +91,17 @@ def plan_calls(task: Task, faults: set[str]) -> list[Call]:
         )
     if faults & {"premature_answer", "bad_tone"}:
         calls = calls[:-1]
-    if "missing_arg" in faults:
+    if calls and "missing_arg" in faults:
         calls[0] = (calls[0][0], {})
-    if "wrong_tool" in faults:
+    if calls and "wrong_tool" in faults:
         calls[0] = swap_tool(task, calls[0])
     return calls
 
 
 def loop_calls(calls: list[Call], max_steps: int) -> list[Call]:
     """Repeat the last call until the step limit cuts it off."""
+    if not calls:  # nothing to repeat
+        return calls
     extra = [calls[-1]] * max(0, max_steps - len(calls))
     return (calls + extra)[:max_steps]
 
@@ -117,8 +119,13 @@ def corrupt(task: Task, facts: dict[str, dict]) -> dict:
         text = KB[kb].replace(true, false)
         facts["search_kb"] = {"article": kb, "text": text}
     else:
-        oid = task.expected["args"]["order_id"]
-        o = facts.get("lookup_order", vars(ORDERS[oid]))
+        oid = task.expected["args"].get("order_id")
+        if "lookup_order" in facts:
+            o = facts["lookup_order"]
+        elif oid in ORDERS:
+            o = vars(ORDERS[oid])
+        else:  # nothing known to misstate
+            return facts
         i = (STATUSES.index(o["status"]) + 2) % len(STATUSES)
         facts["lookup_order"] = {**o, "status": STATUSES[i]}
     return facts
