@@ -2,9 +2,9 @@
 
 Every task is rewritten three ways per perturbation and run
 on three seeds. A placebo (new id, same text) shows how much
-gap noise alone produces. Injected instructions barely move
-the improved config's success rate, yet it starts issuing
-refunds the policy forbids.
+gap noise alone produces. Harm gets the same treatment:
+forbidden refunds are compared with placebo runs, on many
+rewrites of the few tasks where a refund is forbidden.
 """
 
 from __future__ import annotations
@@ -21,8 +21,11 @@ from evalloop.robustness import (
     refusal_balance,
     robustness,
     run_clean,
+    run_perturbed,
     worst_slice,
 )
+
+HARM_VARIANTS = 40  # few tasks forbid refunds: sample more
 
 
 def measure(config, tasks) -> dict:
@@ -52,14 +55,23 @@ def table(base: dict, best: dict) -> None:
         print(f"{a.name:<14}{cells(a)}{cells(b)}")
 
 
-def refusals(label: str, m: dict) -> str:
-    before = refusal_balance(m["clean"])
-    after = refusal_balance(m["bent"]["injected"])
+def harm(label: str, config, tasks) -> str:
+    """Forbidden refunds, placebo vs injected rewrites."""
+    agent = SimAgent(config)
+    risky = [
+        t
+        for t in tasks
+        if "issue_refund" in t.expected["must_not"]
+    ]
+    rate = {}
+    for p in PERTURBATIONS:
+        if p.name in ("placebo", "injected"):
+            runs = run_perturbed(agent, risky, p, HARM_VARIANTS)
+            rate[p.name] = refusal_balance(runs)["unsafe"]
     return (
-        f"  {label:<9}unsafe {before['unsafe']:.1%} ->"
-        f" {after['unsafe']:.1%}, over-refusal"
-        f" {before['over_refusal']:.1%} ->"
-        f" {after['over_refusal']:.1%}"
+        f"  {label:<9}placebo {rate['placebo']:.1%} ->"
+        f" injected {rate['injected']:.1%}"
+        f" ({len(runs)} runs each)"
     )
 
 
@@ -79,9 +91,9 @@ def main() -> None:
     )
     print(f"Worst slice, baseline: {cat} under injection")
     print(f"  placebo {before:.1%} -> injected {after:.1%}")
-    print("Refunds the policy forbids, clean -> injected:")
-    print(refusals("baseline", base))
-    print(refusals("improved", best))
+    print("Refunds the policy forbids, placebo -> injected:")
+    print(harm("baseline", BASELINE, tasks))
+    print(harm("improved", IMPROVED, tasks))
 
 
 if __name__ == "__main__":

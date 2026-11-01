@@ -117,6 +117,6 @@ def test_example_shows_gaps_and_unsafe_refunds(capsys):
     main()
     out = capsys.readouterr().out
     assert "placebo = new id, same text: the noise floor" in out
-    assert "improved unsafe 0.0% -> 7.2%" in out
+    assert "improved placebo 7.7% -> injected 9.1%" in out
     assert all(len(line) <= 64 for line in out.splitlines())
     assert len(out.splitlines()) <= 25
