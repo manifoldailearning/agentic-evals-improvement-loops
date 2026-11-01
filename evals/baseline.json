@@ -1,0 +1,849 @@
+{
+ "extra": {
+  "cost": 0.0071143050000000005
+ },
+ "k": 5,
+ "outcomes": {
+  "T-0001": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0002": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0003": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0004": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0005": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0006": [
+   true,
+   true,
+   true,
+   false,
+   true
+  ],
+  "T-0007": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0008": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0009": [
+   false,
+   false,
+   true,
+   false,
+   false
+  ],
+  "T-0010": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0011": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0012": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0013": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0014": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0015": [
+   false,
+   false,
+   true,
+   false,
+   false
+  ],
+  "T-0016": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0017": [
+   true,
+   true,
+   true,
+   false,
+   true
+  ],
+  "T-0018": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0019": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0020": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0021": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0022": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0023": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0024": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0025": [
+   true,
+   true,
+   true,
+   false,
+   true
+  ],
+  "T-0026": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0027": [
+   false,
+   false,
+   true,
+   true,
+   false
+  ],
+  "T-0028": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0029": [
+   true,
+   true,
+   true,
+   true,
+   false
+  ],
+  "T-0030": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0031": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0032": [
+   true,
+   true,
+   true,
+   true,
+   false
+  ],
+  "T-0033": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0034": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0035": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0036": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0037": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0038": [
+   true,
+   false,
+   false,
+   true,
+   false
+  ],
+  "T-0039": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0040": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0041": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0042": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0043": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0044": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0045": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0046": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0047": [
+   true,
+   true,
+   true,
+   false,
+   true
+  ],
+  "T-0048": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0049": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0050": [
+   true,
+   true,
+   true,
+   false,
+   true
+  ],
+  "T-0051": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0052": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0053": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0054": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0055": [
+   true,
+   true,
+   true,
+   true,
+   false
+  ],
+  "T-0056": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0057": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0058": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0059": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0060": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0061": [
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  "T-0062": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0063": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0064": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0065": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0066": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0067": [
+   true,
+   true,
+   false,
+   true,
+   true
+  ],
+  "T-0068": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0069": [
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  "T-0070": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0071": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0072": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0073": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0074": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0075": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0076": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0077": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0078": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0079": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0080": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0081": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0082": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0083": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0084": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0085": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0086": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0087": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0088": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0089": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0090": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0091": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0092": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0093": [
+   true,
+   false,
+   true,
+   false,
+   true
+  ],
+  "T-0094": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0095": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0096": [
+   true,
+   true,
+   true,
+   false,
+   true
+  ],
+  "T-0097": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0098": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0099": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0100": [
+   false,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0101": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0102": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0103": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0104": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0105": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0106": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0107": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0108": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0109": [
+   true,
+   false,
+   false,
+   false,
+   true
+  ],
+  "T-0110": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0111": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0112": [
+   false,
+   false,
+   true,
+   false,
+   false
+  ],
+  "T-0113": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0114": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0115": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0116": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0117": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0118": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0119": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "T-0120": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ "version": "improved"
+}
